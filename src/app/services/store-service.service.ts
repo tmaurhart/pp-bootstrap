@@ -18,7 +18,7 @@ export class StoreService {
     this.onNgfReady(() => {
       this.ngf
         .iterate((value, key) => {
-          if (key.indexOf("video") < 0) {
+          if (key.indexOf("_") < 0) {
             learningPaths.push(value as LearningPath);
           }
         })
