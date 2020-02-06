@@ -1,0 +1,27 @@
+<div *ngIf="learningPath">
+
+    <p *ngIf="changesSaved">Änderungen gespeichert!</p>
+
+    <label>Lernpfad Name</label>
+    <input [(ngModel)]="learningPath.name" name="learning-path-name"/>
+
+    <div cdkDropList (cdkDropListSorted)="onSort($event)">
+        <div *ngFor="let step of learningPath.steps" cdkDrag>
+            <label>Schritt Name</label>
+            <input [(ngModel)]="step.name" name="step-name"/>
+
+            <label>Werkzeuge</label>
+            <textarea [(ngModel)]="step.tools" name="tools"></textarea>
+
+            <label>Informationen</label>
+            <textarea [(ngModel)]="step.information" name="information"></textarea>
+
+            <label>Komplikationen</label>
+            <textarea [(ngModel)]="step.complications" name="complications"></textarea>
+        </div>
+    </div>
+
+    <button (click)="update()">Save</button>
+    <button (click)="goBack()">Back</button>
+
+</div>

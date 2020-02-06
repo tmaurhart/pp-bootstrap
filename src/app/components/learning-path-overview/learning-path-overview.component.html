@@ -1,0 +1,14 @@
+<div class="app-learning-path-overview">
+  <button (click)="createNewPath()">Neuen Lernpfad anlegen</button>
+    <div class="app-learning-path-overview__paths">
+      <div class="app-learning-path-overview__path" *ngFor="let learningPath of learningPaths$ | async">
+        <h3 class="app-learning-path-app-learning-path-overview__path-name">
+          {{learningPath.name}}
+        </h3>
+        <button class="btn btn-secondary" (click)="goToPath(learningPath.id, 'learning')">Start Lernvorgang</button>
+        <button class="btn btn-secondary" (click)="goToPath(learningPath.id, 'training')">Start Trainingsvorgang</button>
+        <button class="btn btn-success" (click)="editPath(learningPath.id)" *ngIf="!learningPath.isDefault">Bearbeiten</button>
+        <button class="btn btn-danger" (click)="deletePath(learningPath.id)" *ngIf="!learningPath.isDefault">Löschen</button>
+      </div>
+    </div>
+</div>

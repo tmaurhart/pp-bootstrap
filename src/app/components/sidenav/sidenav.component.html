@@ -1,0 +1,30 @@
+<header class="sidebartop"><img src="https://eyecre.at/wp-content/uploads/2018/11/cropped-schrift-2-1-1.png" (click)="goToRoot()"></header>
+<div class="sidebar" *ngIf="currentStep && sidenavMode != 'hide'">
+    <div class="" *ngIf="showInformation">
+        <h3>Informationen</h3>
+       <div class=""><p>
+         {{currentStep.information}}
+        </p></div>
+    </div>
+    <div class="" *ngIf="showTools">
+      <h3>Werkzeuge</h3>
+      <div class="">
+        <ul>
+            <li *ngFor="let tool of getTools">
+                <p (click)="tool.showDetails = !tool.showDetails">
+                    {{tool.name}}
+                </p>
+                <p [hidden]="!tool.showDetails">
+                    Werkzeug Details
+                </p>
+            </li>
+        </ul>
+      </div>
+  </div>
+  <div class="" *ngIf="showComplications">
+    <h3>Komplikationen</h3>
+    <div class="">
+      <p>{{currentStep.complications}}</p>
+    </div>
+  </div>
+</div>
