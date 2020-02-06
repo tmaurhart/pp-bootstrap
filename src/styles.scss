@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+
+body {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 300 !important;
+}
+
+.main {
+    background: #f8f8f8;
+}
+
+.mat-drawer.mat-drawer-side {
+    background: #FFF;
+    box-shadow: 0 0 3px 0px rgba(0, 0, 0, 0.4);
+}
+
+.full {
+    width: 100%;
+    float: left;
+}
+
+.img-responsive {
+    max-width: 100%;
+}
+
+.navbar {
+    padding: 0 !important;
+}
+
+.topbar {
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    background: #fff;
+    top: 0;
+    transition: ease all 0.3s;
+    left: 0;
+}
+
+.topbar .navbar {
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.sidebar_toggle {
+    border: none;
+    padding: 14px 26px 14px;
+    font-size: 21px;
+    background: #3da6db;
+    margin-right: 0;
+    cursor: pointer;
+    float: left;
+}
+
+.logo_section {
+    padding: 0;
+    width: auto;
+    text-align: center;
+    background: transparent;
+    float: left;
+}
+
+.logo_section img {
+    height: 42px;
+    padding: 0;
+    margin: 8px 15px 0;
+}
+
+.right_topbar {
+    float: right;
+    padding: 0;
+}
+
+.icon_info {
+    float: left;
+    width: 100%;
+}
+
+.icon_info ul {
+    float: left;
+    width: auto;
+    list-style: none;
+    margin: 0 !important;
+}
+
+.icon_info ul li a {
+    color: 
+    #333;
+}
+
+.icon_info ul li {
+    float: left;
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    text-align: center;
+    line-height: 35px;
+    position: relative;
+    margin: 15px 0 0 5px;
+}
+
+.icon_info ul.user_profile_dd {
+    float: left;
+    margin: 0 0 0 25px;
+}
+
+.icon_info ul.user_profile_dd>li {
+    width: auto;
+    border-radius: 0;
+    background: #3da6db;
+    margin: 0;
+    padding: 12px 0 12px 20px;
+    height: auto;
+}
+
+.icon_info span.custbadge {
+    font-size: 10px;
+    line-height: 16px;
+    padding: 2px 6px;
+    position: absolute;
+    right: -2px;
+    top: -7px;
+    background: #3da6db;
+    border-radius: 100%;
+    color: #fff;
+    font-weight: 600;
+    width: 19px;
+    height: 19px;
+}
+
+.dropdown-toggle {
+    color: #FFF !important;
+    padding: 0 15px 0 0;
+}
+
+ul.listMenu {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 0 20px;
+}
+
+.blue_color {
+    color: #3da6db
+}
+
+.sidebar h3 {
+    font-size: 16px !important;
+    font-weight: normal !important;
+    border-bottom: 1px solid #ddd;
+    padding: 0 0 10px 0;
+}
+
+.sidebar h3 i {
+    padding-right: 10px;
+}
+
+.sidebar p {
+    margin-bottom: 2.2rem;
+}

@@ -1,18 +1,22 @@
 <header class="sidebartop"><img src="https://eyecre.at/wp-content/uploads/2018/11/cropped-schrift-2-1-1.png" (click)="goToRoot()"></header>
 <div class="sidebar" *ngIf="currentStep && sidenavMode != 'hide'">
+  <div class="">
+    <h3 (click)="goToRoot()"><i class="fas fa-home blue_color" aria-hidden="true"></i>Startseite</h3>
+    <div class=""><p></p></div>
+  </div>
     <div class="" *ngIf="showInformation">
-        <h3>Informationen</h3>
+        <h3><i class="fas fa-info-circle blue_color" aria-hidden="true"></i>Informationen</h3>
        <div class=""><p>
          {{currentStep.information}}
         </p></div>
     </div>
     <div class="" *ngIf="showTools">
-      <h3>Werkzeuge</h3>
+      <h3><i class="fa fa-wrench blue_color" aria-hidden="true"></i>Werkzeuge</h3>
       <div class="">
-        <ul>
+        <ul class="listMenu">
             <li *ngFor="let tool of getTools">
                 <p (click)="tool.showDetails = !tool.showDetails">
-                    {{tool.name}}
+                  <i class="fas fa-chevron-right"></i>  {{tool.name}}
                 </p>
                 <p [hidden]="!tool.showDetails">
                     Werkzeug Details
@@ -22,9 +26,11 @@
       </div>
   </div>
   <div class="" *ngIf="showComplications">
-    <h3>Komplikationen</h3>
+    <h3><i class="fa fa-life-ring blue_color" aria-hidden="true"></i>Komplikationen</h3>
     <div class="">
-      <p>{{currentStep.complications}}</p>
+      <ul class="listMenu">
+        <li><p><i class="fas fa-chevron-right"></i>  {{currentStep.complications}}</p></li>
+    </ul>
     </div>
   </div>
 </div>
